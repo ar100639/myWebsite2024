@@ -1,26 +1,188 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <style>
-     body{
-         text-align: center;
-         background-image: radial-gradient(rgb(235, 232, 6 ), rgb(0, 0, 0));
-         min-width: 100%;
-         min-height: 100%;
-      }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Al Ahed FC Fan Page</title>
+    <style>
+        /* General Body Styling */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-image: linear-gradient(135deg, rgba(35, 53, 61, 1) 0%, rgba(0, 0, 0, 1) 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            flex-direction: column;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            width: 100%;
+            background-color: #222;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #FFDD00;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        nav ul li a:hover {
+            color: white;
+            text-decoration: underline;
+            transform: scale(1.1);
+        }
+
+        /* Container for Content */
+        .content {
+            max-width: 1000px;
+            margin: 100px auto 30px auto; /* Adjusted to prevent overlap with nav */
+            padding: 20px;
+            text-align: left;
+        }
+
+        /* Styling for the header */
+        h1 {
+            font-size: 3.5rem;
+            color: #FFDD00;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+            margin-bottom: 30px;
+            letter-spacing: 1.5px;
+        }
+
+        /* Image Styling */
+        img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 5px solid #FFDD00;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(255, 221, 0, 0.8);
+        }
+
+        /* Description Text Styling */
+        p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin: 20px 0;
+            max-width: 900px;
+            color: #e5e5e5;
+        }
+
+        /* YouTube Video Styling */
+        iframe {
+            border-radius: 10px;
+            max-width: 100%;
+            margin: 30px 0;
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: 60px;
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        footer a {
+            color: #FFDD00;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            img {
+                max-width: 90%;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav ul li {
+                margin: 15px 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<h1>Al Ahed</h1>
 
-<img src='https://assets.the-afc.com/migration/u/z/uz30kbprkccv2f1ud3wg.jpg'width='300px'
-<h1>
-This is my favourite team, Al Ahed who aren't well know in football but are still a pretty good team if you really see them play in real life. They were originated in Lebanon and have won a fair few amount of 
-trophies throughout their entire history in football.
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Matches</a></li>
+        </ul>
+    </nav>
 
+    <div class="content">
+        <h1>Al Ahed FC</h1>
 
-</h1>
+        <!-- Image of Al Ahed FC -->
+        <img src="https://assets.the-afc.com/migration/u/z/uz30kbprkccv2f1ud3wg.jpg" alt="Al Ahed FC logo">
+
+        <!-- Description of the team -->
+        <p>
+            Al Ahed FC is my favorite team! While they are not very well known , they are an lovely team to watch live. Based in Lebanon, Al Ahed has a decent history in football, with lots of trophies and a loyal fan base. Their talent  have earned them good respect, and we hope they continue to rise to become a great team in the lpl.
+        </p>
+
+        <!-- YouTube Video Embed -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mFjlLfDxU5I?si=R_X12s9e-fAAm6dz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Footer with Copyright Notice -->
+    <footer>
+        <p>Made for Al Ahed FC fans. <a href="https://www.al-ahedfc.com" target="_blank">Official Website</a></p>
+    </footer>
+
 </body>
-
 </html>
