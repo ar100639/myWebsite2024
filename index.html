@@ -10,8 +10,8 @@
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
-            background-image: linear-gradient(135deg, rgba(35, 53, 61, 1) 0%, rgba(0, 0, 0, 1) 100%);
-            color: white;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(35, 53, 61, 1) 100%);
+            color: #00FF00; /* Neon Green */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -20,17 +20,32 @@
             flex-direction: column;
             box-sizing: border-box;
             overflow-x: hidden;
+            animation: glitch 2s infinite;
+        }
+
+        /* Glitch Animation */
+        @keyframes glitch {
+            0% {
+                text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00;
+            }
+            50% {
+                text-shadow: -5px -5px 15px #FF00FF, 5px 5px 15px #FF00FF;
+            }
+            100% {
+                text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00;
+            }
         }
 
         /* Navigation Bar Styling */
         nav {
             width: 100%;
-            background-color: #222;
+            background-color: #111;
             position: fixed;
             top: 0;
             left: 0;
             z-index: 100;
-            padding: 15px 0;
+            padding: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5);
         }
 
         nav ul {
@@ -42,57 +57,68 @@
         }
 
         nav ul li {
-            margin: 0 20px;
+            margin: 0 25px;
         }
 
         nav ul li a {
-            color: #FFDD00;
+            color: #00FF00;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2rem;
-            letter-spacing: 1px;
-            transition: color 0.3s ease, transform 0.2s ease;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: transform 0.3s ease, color 0.3s ease;
         }
 
         nav ul li a:hover {
-            color: white;
-            text-decoration: underline;
+            color: #FF00FF; /* Neon Pink */
             transform: scale(1.1);
+            text-decoration: underline;
         }
 
-        /* Container for Content */
+        /* Content Container */
         .content {
             max-width: 1000px;
-            margin: 100px auto 30px auto; /* Adjusted to prevent overlap with nav */
+            margin-top: 100px; /* Adjust to prevent overlap with nav */
             padding: 20px;
             text-align: left;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+            transition: all 0.3s ease;
         }
 
-        /* Styling for the header */
+        .content:hover {
+            box-shadow: 0 0 40px rgba(0, 255, 0, 1);
+        }
+
+        /* Header Styling */
         h1 {
-            font-size: 3.5rem;
-            color: #FFDD00;
-            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
-            margin-bottom: 30px;
-            letter-spacing: 1.5px;
+            font-size: 4rem;
+            color: #00FF00;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px rgba(0, 255, 0, 0.9), 0 0 20px rgba(0, 255, 0, 0.8);
+            margin-bottom: 20px;
+            animation: glitch 1s infinite;
         }
 
         /* Image Styling */
         img {
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
             border-radius: 15px;
             margin: 20px 0;
-            border: 5px solid #FFDD00;
+            border: 5px solid #00FF00;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         img:hover {
             transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(255, 221, 0, 0.8);
+            box-shadow: 0 6px 20px rgba(0, 255, 0, 0.8);
         }
 
-        /* Description Text Styling */
+        /* Paragraph Styling */
         p {
             font-size: 1.2rem;
             line-height: 1.7;
@@ -106,6 +132,7 @@
             border-radius: 10px;
             max-width: 100%;
             margin: 30px 0;
+            border: 3px solid #00FF00;
         }
 
         /* Footer Styling */
@@ -116,21 +143,21 @@
         }
 
         footer a {
-            color: #FFDD00;
+            color: #00FF00;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s ease;
         }
 
         footer a:hover {
-            color: #fff;
+            color: #FF00FF; /* Neon Pink */
             text-decoration: underline;
         }
 
         /* Responsive Styling */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
 
             p {
@@ -172,7 +199,7 @@
 
         <!-- Description of the team -->
         <p>
-            Al Ahed FC is my favorite team! While they are not very well known , they are an lovely team to watch live. Based in Lebanon, Al Ahed has a decent history in football, with lots of trophies and a loyal fan base. Their talent  have earned them good respect, and we hope they continue to rise to become a great team in the lpl.
+            Al Ahed FC is my favorite team! While they are not very well known, they are an awesome team to watch live. Based in Lebanon, Al Ahed has a rich history in football, with lots of trophies and a loyal fan base. Their talent has earned them respect, and we hope they continue to rise and become a dominant force in the league.
         </p>
 
         <!-- YouTube Video Embed -->
